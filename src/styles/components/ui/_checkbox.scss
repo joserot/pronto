@@ -1,0 +1,141 @@
+.container-input {
+	display: block;
+	position: relative;
+	padding-left: 40px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	color: $color-text;
+	font-family: inherit;
+	font-size: 16px;
+	font-weight: 500;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.container-input input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 29px;
+	height: 29px;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+	border-radius: 5px;
+	transition: background-color 0.5s;
+}
+
+.container-input:hover input ~ .checkmark {
+	background-color: $color-blue;
+}
+
+.container-input input:checked ~ .checkmark {
+	background-color: $color-blue;
+}
+
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+.container-input input:checked ~ .checkmark:after {
+	display: block;
+}
+
+.container-input .checkmark:after {
+	left: 9px;
+	top: 5px;
+	width: 10px;
+	height: 15px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.container-input input:disabled ~ .checkmark {
+	background-color: rgba(235, 235, 235, 0.43);
+}
+
+// RESOLUCIÓN ESCRITORIO
+
+@media screen and (min-width: 700px) {
+	.container-input {
+		display: block;
+		position: relative;
+		padding-left: 40px;
+		margin-bottom: 12px;
+		cursor: pointer;
+		color: $color-text;
+		font-family: inherit;
+		font-size: 18px;
+		font-weight: 500;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+
+	.container-input input {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		height: 0;
+		width: 0;
+	}
+
+	.checkmark {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 29px;
+		height: 29px;
+		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+		border-radius: 5px;
+		transition: background-color 0.5s;
+	}
+
+	.container-input:hover input ~ .checkmark {
+		background-color: $color-blue;
+	}
+
+	.container-input input:checked ~ .checkmark {
+		background-color: $color-blue;
+	}
+
+	.checkmark:after {
+		content: "";
+		position: absolute;
+		display: none;
+	}
+
+	.container-input input:checked ~ .checkmark:after {
+		display: block;
+	}
+
+	.container-input .checkmark:after {
+		left: 9px;
+		top: 5px;
+		width: 10px;
+		height: 15px;
+		border: solid white;
+		border-width: 0 3px 3px 0;
+		-webkit-transform: rotate(45deg);
+		-ms-transform: rotate(45deg);
+		transform: rotate(45deg);
+	}
+
+	.container-input input:disabled ~ .checkmark {
+		background-color: rgba(235, 235, 235, 0.43);
+	}
+}

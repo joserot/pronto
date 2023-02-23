@@ -1,0 +1,31 @@
+.btn-secondary {
+	width: auto;
+	height: auto;
+	padding: 5px 20px;
+	cursor: pointer;
+	border: none;
+	border-radius: 10px;
+	background-color: #fff;
+	color: $color-blue-dark;
+	font-family: inherit;
+	font-size: 18px;
+	font-weight: 500;
+	transition: background-color 0.5s;
+}
+
+.btn-secondary:hover {
+	background-color: $color-blue-dark;
+	color: #fff;
+	outline: solid 2px $color-blue;
+}
+
+.btn-secondary:disabled {
+	background-color: $color-text;
+}
+
+.btn-secondary:disabled:hover {
+	background-color: $color-text;
+	outline: none;
+	color: #fff;
+	cursor: auto;
+}

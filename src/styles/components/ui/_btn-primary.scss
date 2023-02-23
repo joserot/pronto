@@ -1,0 +1,26 @@
+.btn-primary {
+	width: auto;
+	height: auto;
+	padding: 5px 20px;
+	cursor: pointer;
+	border: none;
+	border-radius: 10px;
+	background-color: $color-blue-dark;
+	color: #ffff;
+	font-family: inherit;
+	font-size: 18px;
+	font-weight: 500;
+	transition: background-color 0.5s;
+}
+
+.btn-primary:hover {
+	background-color: $color-blue;
+}
+
+.btn-primary:focus {
+	outline: none;
+}
+
+.btn-primary:disabled {
+	background-color: $color-text;
+}
